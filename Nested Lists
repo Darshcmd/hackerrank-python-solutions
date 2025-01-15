@@ -1,0 +1,14 @@
+if __name__ == '__main__':
+    l=[]
+    n=int(input())
+    for i in range(n):
+        name = input()
+        score = float(input())
+        l.append([name,score])
+    l.sort(key=lambda x: x[1])
+    v=sorted(set([x[1] for x in l]))
+    seclowscore=v[1]
+    seclowname = [x[0] for x in l if x[1] == seclowscore]
+    seclowname.sort()
+    for j in seclowname:
+        print(j)
